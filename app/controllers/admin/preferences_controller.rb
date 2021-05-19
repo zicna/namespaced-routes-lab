@@ -3,7 +3,8 @@ class Admin::PreferencesController < ApplicationController
     end
 
     def allow_create_artists
-        raise params.inspect
+        @preference = Preference.all.first
+
         redirect_to artists_path
     end
 
